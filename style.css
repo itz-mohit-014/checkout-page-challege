@@ -1,0 +1,527 @@
+/* Author : Mohit Jangid */
+
+/* declera some variable to use further in code */
+
+:root{
+    --font-family:"Montserrat", sans-serif;
+    --font-weight:600;
+    --color-gray:#4E5150;
+    --gray-1:#333; 
+    --gray-2:#4F4F4F;
+    --gray-3:#828282;   
+    --orange:#F2994A;
+    --white:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.checkout-section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 64px auto;
+
+}
+
+
+.checkout-heading{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 32px;
+    color: var(--color-gray);  
+    max-width: 960px; 
+    width: 100%;
+}
+
+.checkout-details-item{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 100px;
+    width: 100vw;  
+    margin:0px auto;
+    margin-top: 50px;
+}
+
+.checkout-details{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    max-width: 480px;
+
+}
+
+.checkout-info > h3 {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 18px;
+    color: var(--gray-1);
+
+}
+
+.checkout-info{
+    margin-bottom: 50px;
+}
+/* styling all input boxes and labeling for them */
+.input-container{
+    margin-top: 15px;
+    position: relative;
+    max-width: 480px;
+}
+
+.input-container > label{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 12px;
+    color: var(--gray-2);
+}
+
+.input-container > input {  
+    width: 100%;
+    max-height: 56px;
+    margin-top: 6px;
+    padding: 18px 50px ;
+    padding-right: 1rem;
+    outline: none;
+    border: 1px solid var(--gray-3);
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 1rem;
+    color: var(--gray-3);
+
+}
+
+/* input box hover state */
+.input-container > input:hover ,.input-container > input:focus{
+    border-color:var(--orange) ;
+    box-shadow: 0px 2px 4px var(--gray-3);
+
+}
+.input-container:hover > .material-symbols-outlined{
+    color: var(--orange);
+
+}
+#fname{
+    color: var(--gray-1);
+}
+
+/* icon styling */
+
+.material-symbols-outlined{
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  color: var(--gray-3);
+}
+
+.input-container > .material-symbols-outlined{
+    position: absolute;
+    top: 2.5rem;
+    left: 12px;
+}
+
+.country-name-and-code{
+    display: flex;
+    justify-content: space-between;
+}
+
+.country-list, .postal-code-box{
+    display: inline-block;
+    max-width: 43%;
+}
+
+
+#country-name-list{
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    height: 21px;
+    width: 21px;
+    border: 1px solid var(--gray-1);
+
+}
+
+#save-info{ 
+    height: 21px;
+    width: 21px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-3);
+    outline: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+#save-info:hover, #save-info:focus{
+    box-shadow: none;
+
+}
+
+#submit-btn{
+    width: 166px;
+    height: 54px;
+    float: right;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: var(--orange);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 1rem;
+    color: var(--white);
+}
+
+/* creating hovering effect */
+
+#submit-btn{
+    border: 2px solid var(--gray-3);
+    border-top:none ;
+    border-left:none ;
+}
+
+
+#submit-btn:hover{
+    background-color: #fff;
+    color: var(--orange);
+    outline: 1px solid var(--orange);
+    box-shadow: 0px 1px 4px 2px var(--orange);
+
+}
+
+#submit-btn:active{
+    border: 2px solid #000;
+    border-bottom:none ;
+    border-right:none ;
+    
+}
+
+/* checkout items styling */
+
+.checkout-items{
+    max-width: 385px;
+    width: 100%;
+    max-height: 535px;
+    height: 100%;
+    border-radius: 12px;
+    padding: 30px;
+    background-color: #f2f2f2;
+}
+.itmes-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.itmes-container > .item-img{
+    max-width:135px ;
+    max-height: 135px;
+    
+}
+.itmes-container > .item-img > img{
+    border-radius: 12px;
+    width: 100%;
+}
+.purchase-item-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100px;
+}
+.purchase-item-details > .item-name{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 1rem;
+    color: #4E5150;
+}
+.purchase-item-details > .item-price{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    width: 163px;
+    padding-top: 8px;
+}
+.purchase-item-details > .item-price :first-child{
+    color: var(--orange);
+    font-size: 16px;
+    margin-right: 5px;
+}
+.purchase-item-details > .item-price :last-child{
+    color: #4E5150;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.purchase-item-details > .quantity{
+    max-width: 130px;
+    width: 100%;
+    height: 46px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--gray-3);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 16px;
+
+
+}
+.purchase-item-details > .quantity > input{
+    height: 24px;
+    width: 24px;
+    color: var(--gray-3);
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 16px;
+}
+.purchase-item-details > .quantity > input:active{
+    scale: 0.95;
+}
+
+.actual-payment{
+    margin-top: 80px;
+
+}
+.actual-payment > p{
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    color: var(--gray-1);
+    position: relative;
+    width: 100%;
+
+}
+
+.shipping-charge::before, .shipping-charge::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #bdbdbd;
+
+}
+.shipping-charge::after{
+    top: 120%;
+}
+.actual-payment > p :last-child{
+    font-size: 14px;
+    float: right;
+}
+
+.total-amt{
+    margin-top: 15px;
+}
+
+.footer{
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: 16px;
+    color: var(--gray-2);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+
+}
+.footer > a{
+    color: var(--gray-2);
+}
+
+
+/* RESPONSIVE DESIGN HERE */
+
+@media screen and ( 200px <= width  <= 600px ){
+
+    .checkout-section{
+        margin: 32px 12px;
+        width: calc(100vw - 25px );
+    }
+    
+    .checkout-heading{
+        font-size: 24px;
+        max-width: 380px;
+        width: 90vw;
+    }
+
+    .checkout-details{
+        order:2 ;
+    }
+
+    .checkout-details-item{
+        margin: 20px 0px;
+        gap: 30px;
+    }
+
+    .checkout-items{
+        width: 90vw;
+        max-height: 500px;
+        padding: 20px;
+    }
+    .itmes-container > .item-img{
+        max-width:115px ;
+        max-height: 115px;
+        margin-right: 15px;
+        
+    }
+
+
+    .purchase-item-details > .item-name{
+        font-size: 12px;
+
+    }
+    .purchase-item-details > .item-price :first-child{
+        font-size: 14px;
+    }
+    .purchase-item-details > .item-price :last-child{
+        font-size: 10px;
+    }
+    .purchase-item-details > .quantity{
+        max-width: 100px;
+        height: 38px;
+        font-size: 12px;
+    }
+    .purchase-item-details > .quantity > input{
+        height: 18px;
+        width: 18px;
+        font-size: 12px;
+    }
+    .actual-payment > p{
+        font-size: 14px;
+    }
+
+    /* conntact info  */
+
+    .checkout-details{
+        width: 90vw;
+        max-width: 380px;
+    }
+    .checkout-details{
+        font-size: 14px;
+    }
+
+    .checkout-info{
+        margin-bottom: 40px;
+    }
+    .input-container > label{
+        font-size: 10px;
+    }
+    .input-container > input {  
+        max-height:40px ;
+        padding: 13px 35px;
+        padding-right: 12px;
+        font-size: 12px;
+    }
+
+    .input-container > .material-symbols-outlined{
+        top: 2.1rem;
+        left: 10px;
+        font-size: 18px;
+    }
+    .input-container > input:hover ,.input-container > input:focus{
+        border-color:var(--orange) ;
+        box-shadow: 0px 0px 3px var(--gray-3);
+    
+    }
+    .input-container:hover > .material-symbols-outlined{
+        color: var(--orange);
+    
+    }
+
+    #country-name-list{
+        top: 34px;
+        right: 12px;
+        font-size: 18px;
+
+    }
+
+    .footer{
+        font-size: 12px;
+    }
+}
+
+
+@media screen and ( 600px <= width  <= 880px ){
+
+    .checkout-heading{
+        max-width: 50vw;
+
+    }
+
+    .checkout-details{
+        order:2 ;
+    }
+
+    .checkout-details, .checkout-items{
+        max-width:50vw;
+    }
+
+    .input-container > input { 
+        padding: 18px 40px ;
+        padding-right: 12PX;
+        font-size: 14px;
+    }
+
+    .input-container > .material-symbols-outlined{
+        top: 2.75rem;
+    }
+    .input-container > input:hover ,.input-container > input:focus{
+        border-color:var(--orange) ;
+        box-shadow: 0px 0px 3px var(--gray-3);
+    
+    }
+    .input-container:hover > .material-symbols-outlined{
+        color: var(--orange);
+    
+    }
+
+    #country-name-list{
+        top: 46px;
+        right: 12px;
+        height: 18px;
+        width: 18px;
+
+    }
+
+}
+
+
+@media screen and ( 880px <= width  <= 1080px ){
+
+    .checkout-heading{
+        max-width: 90vw;
+
+    }
+    .checkout-details-item{
+        gap: 50px;
+    }
+    .checkout-details, .checkout-items{
+        max-width:40vw;
+    }
+
+    .input-container > input:hover ,.input-container > input:focus{
+        border-color:var(--orange) ;
+        box-shadow: 0px 0px 3px var(--gray-3);
+    
+    }
+
+    #country-name-list{
+        font-size: 18px;
+
+    }
+
+}
+
+
